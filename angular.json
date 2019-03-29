@@ -119,5 +119,10 @@
       }
     }
   },
-  "defaultProject": "crustatia"
+  "defaultProject": "crustatia",
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false
+    }
+  }
 }
