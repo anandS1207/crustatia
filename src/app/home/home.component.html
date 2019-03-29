@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" (click)="goHome()"  href="#">CRUST</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" (click)="toggleCollapsed()" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="games()"  name="games">Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="aboutUs()" name="aboutUs">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="faqs()" name="faq">FAQ</a>
+        </li>
+      </ul>
+      <div layout-align="end">
+      <button class="btn btn-outline-success my-2 my-sm-0" ng-style="float:right"  type="submit" ng-click="login()">lOGIN</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  ng-style="float:right" ng-click="signup()">sIGNuP</button>
+        </div>
+    </div>
+  </nav>
+  <br>
+  <div *ngIf="isDefault" class="container">
+    <h3>Welcome to Crustatia</h3>
+    <p>Here the gaming will starts, it's one of the best gaming platform for ever. The real gamers will come from here </p>
+    <p>Not only android games and all system games also will be played and conducted here</p>
+    <p>Not only regional wise, instiution wise, areas wise games will be conducted here</p>
+  </div>
+  <div *ngIf="isGame" class="container">
+      <h3>Welcome to Crustatia</h3>
+      <p>soon games will be coming here </p>
+      <p>PUBG, clash of clans are coming for mobile games</p>
+      <p>Graw, Blur games will be hosted for pc games</p>s
+    </div>
+    <div *ngIf="isFaq"  class="container">
+        <h3>Welcome to Crustatia</h3>
+        <p>as of now no faq</p>
+        <p>we are working of faq</p>
+
+      </div>
+      <div *ngIf="isAboutUs" class="container">
+          <h3>Welcome to Crustatia</h3>
+          <p>Nothing is there to tell about us that's it</p>
+          <p>worst waste fellow for ever</p>
+        </div>
